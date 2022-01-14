@@ -26,6 +26,5 @@ export async function searchPokemon(pokemon){
         return data;
     }
     catch(err){
-
     }
 }

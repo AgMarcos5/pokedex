@@ -3,17 +3,19 @@ import './style.css'
 import { useState } from "react";
 import {searchPokemon} from '../../services/pokemon'
 
- function SearchBox (){
+ function SearchBox ({onSearch}){
 
     const [search, setSearch] = useState("");
 
     const onChange = (evt) => {
         setSearch(evt.target.value);
+        if(evt.target.value.length === 0){
+            onSearch(null);
+        }
     }
 
     const onClick = async (evt) => {
-        const data = await searchPokemon(search);
-        console.log(data);
+        onSearch(search);
     }
 
     return (

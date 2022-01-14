@@ -1,5 +1,38 @@
 .avatar {
-    background: #c1c1c1;
-    border-radius: 60px;
+    background: linear-gradient(to right, #363636, rgba(0, 0, 0, 0));
+    border-radius: 60px 8px 8px 60px;
     margin: 5px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    color: #e8e3c6;
+    cursor: pointer;
+}
+
+.avatar:hover{
+    background: linear-gradient(to right, #363636, rgba(232, 227, 198,.3));
+    background-position:-290px; 
+    color: #f7f2d9;
+    
+    transition: 1s;
+}
+.avatar.selected {
+    background: rgb(232, 227, 198);
+    color: #363636;
+    
+    transition: 0s;
+}
+
+.avatar img {
+    max-width: 100px;
+    max-height: 100px;
+    border: 1px solid rgb(243 243 243 / 18%);
+    border-radius: 50px;
+    box-shadow: 0px 0px 2px;
+}
+
+.avatar span{
+    margin-left: 10px;
+    font-size: 16pt;
+    text-transform: capitalize;
 }
