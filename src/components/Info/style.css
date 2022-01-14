@@ -1,0 +1,14 @@
+.pokemon-photo {
+    background: #c7c9bb;
+    max-width: 300px;
+    overflow: hidden;
+    max-height: 300px;
+    display: flex;
+    border: 10px solid #f0f2e7;
+    box-shadow: 0px 0px 5px rgb(167 169 156);
+    margin: 0 auto;
+}
+
+.pokemon-photo img {
+    width: 100%;
+}

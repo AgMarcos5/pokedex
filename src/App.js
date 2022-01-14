@@ -84,10 +84,12 @@ function App() {
   }
 
   return (
-    <div className='content'>      
-      <div className='info-container'>
-          <Info pokemon={pokemonSelected}/>
-      </div>
+    <div className='content'>  
+      <div className='info-container-border'>
+        <div className='info-container'>
+            <Info pokemon={pokemonSelected}/>
+        </div>
+      </div>    
       <div className='sidebar'>
           <SearchBox onSearch={onSearch}/>
           <Pagination onLeftClick={prev}  onRightClick={next} page={page} totalPages={total}/>
