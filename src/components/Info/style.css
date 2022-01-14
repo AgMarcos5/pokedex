@@ -1,5 +1,6 @@
 .pokemon-photo {
-    background: #c7c9bb;
+    background: rgb(210,212,201);
+    background: radial-gradient(circle, rgba(210,212,201,1) 35%, rgba(168,170,159,1) 100%);
     max-width: 300px;
     overflow: hidden;
     max-height: 300px;

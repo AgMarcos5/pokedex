@@ -12,21 +12,27 @@ function Info({pokemon}){
                         <div>
 
                             <div>
-                                <span>#1</span>
+                                <span>#{pokemon.id}</span>
                                 <h1>{pokemon.name}</h1>
-                                <span>Tipo</span>
+                                <span>
+                                    {pokemon.types.map(function(d, idx){
+                                        return (<span key={idx}>{d.type.name} </span>)
+                                    })}
+                                </span>
                             </div>
                         
                             <div className="pokemon-photo"><img src={pokemon.sprites.other.home.front_default} /></div>
 
                             <div>
-                                <div>Peso</div>
-                                <div>Altura</div>
+                                <div>Peso: {pokemon.weight}</div>
+                                <div>Altura: {pokemon.height}</div>
                                 
                                 <div>Stats</div>
-                                <div>
-                                
-                                </div>
+                                <ul>
+                                {pokemon.stats.map(function(d, idx){
+                                    return (<li key={idx}>{d.stat.name} {d.base_stat}</li>)
+                                })}
+                                </ul>
                             </div>
 
                         </div>   
