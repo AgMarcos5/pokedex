@@ -3,13 +3,12 @@
 }
 
 
-
-.content{
+.content {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 20px;
-  padding: 20px;
+  padding: 0;
+  height: 100vh;
   align-items: center;
 }
 
@@ -66,6 +65,14 @@
     
     box-shadow: 3px 3px 3px rgb(0 0 0 / 20%);
 }
+
+.pikachu{
+  z-index: 1;
+  position: absolute;
+  bottom: -70px;
+  right: 5px;
+}
+
 
 /*  SIDEBAR */
 

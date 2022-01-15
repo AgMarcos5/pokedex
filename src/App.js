@@ -6,6 +6,8 @@ import Pokedex from './components/Pokedex/Pokedex';
 import Pagination from './components/Pagination/Pagination';
 import Info from './components/Info/Info'
 
+import pikachu from './img/pikachu.png'
+
 function App() {
 
   // pokemonData es un array de 20 pokemon
@@ -19,7 +21,7 @@ function App() {
 
 
   const [loading, setLoading] = useState(true);
-  const initialUrl = 'https://pokeapi.co/api/v2/pokemon?limit=6&offset=0';
+  const initialUrl = 'https://pokeapi.co/api/v2/pokemon?limit=4&offset=0';
 
   // Pokemon seleccionado
   const [pokemonSelected,setPokemonSelected] = useState(null);
@@ -89,6 +91,7 @@ function App() {
         <div className='info-container'>
             <Info pokemon={pokemonSelected}/>
         </div>
+        <img src={pikachu} className='pikachu'/>
       </div>    
       <div className='sidebar'>
           <SearchBox onSearch={onSearch}/>
