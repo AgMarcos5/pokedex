@@ -1,7 +1,9 @@
 import React from "react";
-import './style.css'
+import './style.scss'
 import { useState } from "react";
 import {searchPokemon} from '../../services/pokemon'
+
+import searchImage from './pokeball_search.png'
 
  function SearchBox ({onSearch}){
 
@@ -20,15 +22,14 @@ import {searchPokemon} from '../../services/pokemon'
 
     return (
         <div className="searchBox">
-            <div>
                 <input 
+                    type="search" 
                     placeholder="Buscar pokemon..."
                     onChange={onChange}
                 />
-            </div>
-            <div>
-                <button onClick={onClick}>Buscar</button>
-            </div>
+                <button className="searchButton" onClick={onClick}>
+                <img src={searchImage}/>
+                </button>
         </div>
     );
 }

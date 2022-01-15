@@ -1,0 +1,83 @@
+
+//Vars 
+:root {
+    --rad: 10px;
+    --dur: .3s;
+    --color-dark: linear-gradient(to right, #363636, rgba(0, 0, 0, 0));
+    --color-light: #f7f2d9;
+    --color-brand: #e4532f;
+    --font-fam: 'Lato', sans-serif;
+    --height: 50px;
+    --btn-width: 3rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+  }
+  .searchBox {
+    position: relative;
+    background: var(--color-dark);
+    max-width: 300px;
+    height: var(--height);
+    margin: 10px;
+
+    ::placeholder{
+        color: #979588;
+    }
+  }
+
+  input, .searchButton {
+    height: var(--height);
+    font-family: var(--font-fam);
+    border: 0;
+    color: var(--color-light);
+    font-size: 1.8rem;
+  }
+  
+  input[type="search"] {
+    font-size: 13pt;
+    float: left;
+    outline: 0; 
+    width: 100%;
+    background: var(--color-dark);
+    padding: 0 1.6rem;
+    border-radius: var(--rad);
+    appearance: none; 
+    transition: all var(--dur) var(--bez);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+  }
+
+  .searchButton {
+    padding: 0;
+    display: none; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--btn-width);
+    font-weight: bold;
+    background: var(--color-brand);
+    border-radius: 0 var(--rad) var(--rad) 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    img{  
+        transition: 1s;
+        transform: rotate(0deg);
+    }
+
+    
+  }
+
+
+  .searchButton:hover img{
+    transform: rotate(45deg);
+    transition: 1s;
+    }
+
+  input:not(:placeholder-shown) {
+    border-radius: var(--rad) 0 0 var(--rad);
+    width: calc(100% - var(--btn-width));
+    + button {
+      display: block;
+    }
+  }
+  

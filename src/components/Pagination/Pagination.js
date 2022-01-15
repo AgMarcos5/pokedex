@@ -1,14 +1,20 @@
 import React from "react";
+import './style.css'
+import arrow from './arrow.png'
 
 function Pagination (props) {
 
     const {onLeftClick, onRightClick, page, totalPages} = props;
 
     return (
-        <div>
-            <button onClick={onLeftClick}>izq</button>
+        <div className="pagination">
+            <button className="left" onClick={onLeftClick}>
+                <img src={arrow} />
+            </button>
             <div>{page} de {totalPages}</div>
-            <button onClick={onRightClick}>der</button>
+            <button onClick={onRightClick}>
+                <img src={arrow} />
+            </button>
         </div>
     );
 }

@@ -29,21 +29,23 @@ function Info({pokemon}){
                                 </div>
 
                                 <div className='stats'>
-                                    <div className='subtitle'>Habilidades
-                                        
+                                    <div className='col'>
+                                        <div className='subtitle'>Habilidades</div>
+                                        <div>
+                                            {pokemon.abilities.map(function(d, idx){
+                                                return (<span className="tag" key={idx}>{d.ability.name} </span>)
+                                            })}
+                                        </div>
+                                        <br/>
                                     </div>
-                                    <div>
-                                        {pokemon.abilities.map(function(d, idx){
-                                            return (<span key={idx}>{d.ability.name} </span>)
+                                    <div className='col'>
+                                        <div className='subtitle'>Estadísticas</div>
+                                        <ul>
+                                        {pokemon.stats.map(function(d, idx){
+                                            return (<li key={idx}>{d.stat.name}: {d.base_stat}</li>)
                                         })}
+                                        </ul>
                                     </div>
-                                    
-                                    <div className='subtitle'>Estadísticas</div>
-                                    <ul>
-                                    {pokemon.stats.map(function(d, idx){
-                                        return (<li key={idx}>{d.stat.name} {d.base_stat}</li>)
-                                    })}
-                                    </ul>
                                 </div>
                             </div>
 

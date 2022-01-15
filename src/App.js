@@ -95,8 +95,10 @@ function App() {
       </div>    
       <div className='sidebar'>
           <SearchBox onSearch={onSearch}/>
-          <Pagination onLeftClick={prev}  onRightClick={next} page={page} totalPages={total}/>
-          <Pokedex pokemonData={pokemonData} loading={loading} pokemonSelected={pokemonSelected} setPokemonSelected={setPokemonSelected}/>
+          <div className='listPokemon'>
+            <Pagination onLeftClick={prev}  onRightClick={next} page={page} totalPages={total}/>
+            <Pokedex pokemonData={pokemonData} loading={loading} pokemonSelected={pokemonSelected} setPokemonSelected={setPokemonSelected}/>
+          </div>
       </div>
     </div>
   );

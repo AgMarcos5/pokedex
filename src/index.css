@@ -1,6 +1,7 @@
 body {
   background: #6a6562;
   background-image: url(./img/background.jpg);
+  background-attachment: fixed;
   background-size: auto;
   background-repeat: no-repeat;
   background-position-x: center;

@@ -36,3 +36,15 @@
     font-size: 16pt;
     text-transform: capitalize;
 }
+
+
+@media(max-width:1335px){
+    .avatar{ 
+        width: 100px;
+        border-radius: 60px;
+        margin: 5px auto;
+    }
+    .avatar span{
+        display: none;
+    }
+}

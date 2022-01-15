@@ -5,11 +5,11 @@
 
 .content {
   display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  height: 100vh;
-  align-items: center;
+  max-width: 1400px;
+  margin: 60px auto 0 auto;
+  padding: 20px;
+  align-items: center;  
+  justify-content: center;
 }
 
 /*  INFO  */
@@ -51,7 +51,8 @@
 }
 
 .info-container-border{
-  width: 100%;
+    max-width: 950px;
+    width: 100%;
     border-radius: 10px;
     margin-right: 30px;
     padding: 24px;
@@ -79,4 +80,122 @@
 .sidebar {
   width: 300px;
   text-align: center;
+}
+
+
+@media(max-width:1335px){
+  .sidebar{
+    width: 150px;
+  }
+  .pagination div{
+    display: none;
+  }
+}
+
+@media(max-width:1060px){
+  .content{
+    flex-direction: column-reverse;
+    padding: 0 40px;
+  }
+  .info-container-border{
+    margin-right: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .searchBox {
+    width: 400px;
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #343230;
+    border-bottom: 0 !important;
+    width: auto;
+    margin: 0 !important;
+  }
+
+  .pagination button{
+    margin-right: 5px;
+  }
+
+  .listPokemon {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: inherit;
+    height: 100px !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 100px;
+    border-radius: 60px;
+    margin: auto 5px;
+    height: 100px;
+  }
+
+}
+
+
+@media(max-width:900px){
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media(max-width:774px){
+  .title::before {
+    display: none;
+  }
+}
+
+@media(max-width:554px){
+  .pokemon-photo {
+    transform: scale(0.685);
+    margin: 0 auto  !important;
+  }
+  .info-grid{
+    overflow: hidden;
+  }
+  .listPokemon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .title{
+    flex-wrap: wrap;
+    height: auto !important;
+    justify-content: center !important;
+  }
+  .title span{
+    margin: 10px;
+  }
 }

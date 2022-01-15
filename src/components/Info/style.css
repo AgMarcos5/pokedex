@@ -32,6 +32,7 @@
     padding: 5px;
     margin-bottom: 10px;
     margin-top: 10px;
+    font-size: 16pt;
 }
 
 .type {
@@ -61,6 +62,7 @@
     margin-bottom: 50px;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .pokemon-photo {
@@ -72,6 +74,10 @@
     border: 10px solid #f0f2e7;
     box-shadow: 0px 0px 5px rgb(167 169 156);
     position: relative;
+    
+    min-width: 300px;
+    margin-right: 65px;
+    margin-left: 40px;
 }
 
 
@@ -93,6 +99,11 @@
 
 .pokemon-photo img {
     width: 100%;
+}
+
+.photo{
+    width: 300px !important;
+    height: 300px;
 }
 
 .cornerPhoto {
@@ -121,5 +132,57 @@
 
 
 .stats{
-    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.stats div{
+    min-width: 300px;
+}
+.stats ul{
+    padding-left: 10px;
+}
+.stats li{
+    border-bottom: 1px solid #c9c9ad;
+    list-style: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-size: 15pt;
+    color: #293a4e;
+}
+
+.tag {
+    background: #babcb1;
+    padding: 4px;
+    border-radius: 2px;
+    margin-right: 10px;
+    color: #3a4d64;
+    font-weight: 400;
+}
+
+@media(max-width:940px){
+    .stats {
+        flex-direction: row;
+        margin-top: 30px;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .stats div{
+        max-width: 100%;
+        min-width: 0;
+    }
+    .stats ul {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .col{
+        margin: 10px;
+        width: 50%;
+        max-width: 500px !important;
+    }
 }
