@@ -10,7 +10,7 @@ import searchImage from './pokeball_search.png'
     const [search, setSearch] = useState("");
 
     const onChange = (evt) => {
-        setSearch(evt.target.value);
+        setSearch(evt.target.value.replace(/ /g,'').toLowerCase());
         if(evt.target.value.length === 0){
             onSearch(null);
         }
