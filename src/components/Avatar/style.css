@@ -7,6 +7,8 @@
     padding: 3px;
     color: #e8e3c6;
     cursor: pointer;
+    
+    min-width: 100px;
 }
 
 .avatar:hover{
@@ -50,4 +52,16 @@
     .avatar:hover{
         background-position:-106px; 
     }
+}
+
+
+
+@media(max-width:1060px){
+
+    .avatar {
+        width: 100px;
+        border-radius: 60px;
+        margin: 5px;
+        height: 100px;
+      }
 }

@@ -39,3 +39,27 @@
         transform: translateX(0px) rotate(0deg);
     }
   }
+
+
+  @media(max-width:1060px){
+    .container {
+        width: inherit;
+        height: 100px !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+}
+
+  
+@media(max-width:469px){
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      width: 315px !important;
+      height: 210px !important;
+    }
+}
+  

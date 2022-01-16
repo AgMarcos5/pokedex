@@ -26,7 +26,7 @@ function App() {
   // Pokemon seleccionado
   const [pokemonSelected,setPokemonSelected] = useState(null);
 
-  
+  // Inicializa pokedex
   useEffect( () => {
     fetchData();
   }, []);
@@ -50,8 +50,9 @@ function App() {
     setPokemonData(_pokemonData);
   }
 
+  // Control de páginas
   const next = async () => {
-    if(!nextUrl || page == total) return;
+    if(!nextUrl || page === total) return;
     setLoading(true);
     let response = await getAllPokemon(nextUrl);
     setNextUrl(response.next);
@@ -62,7 +63,7 @@ function App() {
   }
 
   const prev = async () => {
-    if(!prevUrl || page == 1) return;
+    if(!prevUrl || page === 1) return;
     setLoading(true);
     let response = await getAllPokemon(prevUrl);
     setNextUrl(response.next);
@@ -72,6 +73,7 @@ function App() {
     setLoading(false);
   }
 
+  // Evento búsqueda
   const onSearch = async (pokemon) => {
     if(pokemon){
       const data = await searchPokemon(pokemon);
@@ -82,6 +84,7 @@ function App() {
         return;
       }
     }
+    // si no se encuentra el pokemon, vuelve a la pokedex inicial
     return fetchData();
   }
 
@@ -92,7 +95,7 @@ function App() {
         <div className='info-container'>
             <Info pokemon={pokemonSelected}/>
         </div>
-        <div className='pikachu'><img src={pikachu}/></div>
+        <div className='pikachu'><img src={pikachu} alt="pikachu"/></div>
       </div>    
       <div className='sidebar'>
           <SearchBox onSearch={onSearch}/>

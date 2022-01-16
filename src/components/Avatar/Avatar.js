@@ -3,6 +3,7 @@ import './style.css'
 
 function Avatar({pokemon, image, selected, setSelected}){
 
+    // Si es el pokemon seleccionado, le agrega la clase para dar estilo
     const className = (selected === pokemon) ? "avatar selected" : "avatar";
     
     const src = () => {

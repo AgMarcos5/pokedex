@@ -158,6 +158,9 @@
     font-weight: 400;
 }
 
+
+/*  RESPONSIVE  */
+
 @media(min-width:941px){     
     .stats div{
         min-width: 300px;
@@ -201,3 +204,42 @@
         width: 100px;
     }
 }
+
+
+@media(max-width:774px){
+    .title::before {
+      display: none;
+    }
+  }
+
+  
+@media(max-width:554px){
+    
+
+    .stats {
+      flex-direction: column !important;
+    }
+    .stats ul{
+      flex-direction: column !important;
+    }
+    .col {
+      margin: 0 !important;
+      width: 100% !important;
+    }
+    .pokemon-photo {
+      transform: scale(0.685);
+      margin: 0 auto  !important;
+    }
+    .info-grid{
+      overflow: hidden;
+    }
+  
+    .title{
+      flex-wrap: wrap;
+      height: auto !important;
+      justify-content: center !important;
+    }
+    .title span{
+      margin: 10px;
+    }
+  }

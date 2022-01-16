@@ -1,7 +1,6 @@
 import React from "react";
 import './style.scss'
 import { useState } from "react";
-import {searchPokemon} from '../../services/pokemon'
 
 import searchImage from './pokeball_search.png'
 
@@ -28,7 +27,7 @@ import searchImage from './pokeball_search.png'
                     onChange={onChange}
                 />
                 <button className="searchButton" onClick={onClick}>
-                <img src={searchImage}/>
+                <img src={searchImage} alt="Buscar"/>
                 </button>
         </div>
     );

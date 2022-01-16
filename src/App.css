@@ -84,12 +84,11 @@
 }
 
 
+/*  RESPONSIVE  */
+
 @media(max-width:1335px){
   .sidebar{
     width: 150px;
-  }
-  .pagination div{
-    display: none;
   }
 }
 
@@ -101,7 +100,6 @@
   .info-container-border{
     margin-right: 0;
   }
-
   .sidebar {
     width: 100%;
     display: flex;
@@ -112,25 +110,6 @@
     align-items: center;
     margin-bottom: 10px;
   }
-
-  .searchBox {
-    width: 400px;
-  }
-
-  .pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: #343230;
-    border-bottom: 0 !important;
-    width: auto;
-    margin: 0 !important;
-  }
-
-  .pagination button{
-    margin-right: 5px;
-  }
-
   .listPokemon {
     display: flex;
     flex-direction: row;
@@ -140,24 +119,6 @@
     margin-top: 30px;
     margin-bottom: 20px;
   }
-
-  .container {
-    width: inherit;
-    height: 100px !important;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .avatar {
-    width: 100px;
-    border-radius: 60px;
-    margin: auto 5px;
-    height: 100px;
-  }
-
 }
 
 
@@ -168,54 +129,15 @@
   }
 }
 
-@media(max-width:774px){
-  .title::before {
-    display: none;
-  }
-}
-
 @media(max-width:554px){
-  .stats {
-    flex-direction: column !important;
-  }
-  .stats ul{
-    flex-direction: column !important;
-  }
-  .col {
-    margin: 0 !important;
-    width: 100% !important;
-  }
-  .pokemon-photo {
-    transform: scale(0.685);
-    margin: 0 auto  !important;
-  }
-  .info-grid{
-    overflow: hidden;
-  }
+    
   .listPokemon {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .title{
-    flex-wrap: wrap;
-    height: auto !important;
-    justify-content: center !important;
-  }
-  .title span{
-    margin: 10px;
-  }
-}
-
-@media(max-width:454px){
-  .container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 315px !important;
-    height: 210px !important;
-  }
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    
 }
