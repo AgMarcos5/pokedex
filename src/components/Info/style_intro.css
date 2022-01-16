@@ -1,0 +1,76 @@
+.magikarp{
+    width: 113px;
+    height: 88px;
+    display: inline-block;
+    background-image: url(./mag_1.jpg);
+}
+
+.intro h1:hover .magikarp{
+    background-image: url(./mag_2.jpg);
+}
+
+.intro h1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 0;
+    transition: 0.5s ease all .3s;
+}
+
+.intro{ 
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.intro h1::after {
+    content: "";
+    position: absolute;
+    top: 84px;
+    height: 2px;
+    width: 0%;
+    left: 5%;
+    background-color: rgb(224 84 48);
+    transition: 0.5s ease all .3s;
+  }
+
+  .intro h1:hover{
+    top: -5px;
+    color: #293a4e;
+  }
+
+  
+ .intro h1:hover::after {
+    width: 90%;
+      transition: 0.3s ease all;
+  }
+
+  .intro a{
+      text-decoration: none;
+      color: rgb(224 84 48);
+  }
+
+  .intro a:hover{
+      padding-bottom: 5px;
+      border-bottom:1px solid ;
+  }
+
+  .linkBG{
+      color: #cfa434 !important;
+      background:#293a4e;
+      padding: 10px;
+      transition: 1s;
+    line-height: 3em;
+  }
+  .linkBG:hover{
+    color: #ffdb7d !important;
+    padding: 10px !important;
+    border-bottom:1px solid ;
+  }
+
+.link-container {
+    text-align: center;
+    margin-top: 40px;
+    line-height: 2em;
+}

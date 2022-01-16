@@ -36,7 +36,7 @@ function App() {
     setNextUrl(response.next);
     setPrevUrl(response.previous);
     setPage(1);
-    setTotal(Math.ceil(response.count / 20))
+    setTotal(Math.ceil(response.count / 4))
     await loadingPokemon(response.results);
     setLoading(false);
   }
@@ -86,6 +86,7 @@ function App() {
   }
 
   return (
+    <>
     <div className='content'>  
       <div className='info-container-border'>
         <div className='info-container'>
@@ -101,6 +102,7 @@ function App() {
           </div>
       </div>
     </div>
+    </>
   );
 }
 

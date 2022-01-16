@@ -47,4 +47,7 @@
     .avatar span{
         display: none;
     }
+    .avatar:hover{
+        background-position:-106px; 
+    }
 }

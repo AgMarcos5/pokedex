@@ -22,6 +22,7 @@
   z-index: 1;
   position: relative;
   border: 10px solid #d6cfbf;
+  min-height: 600px;
 }
 
 .info-container::after{

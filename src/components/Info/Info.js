@@ -1,6 +1,7 @@
 import './style.css'
 import typeColors from './typeColors'
 import cornerPhoto from './corners_photo.png'
+import Intro from './Intro';
 
 function Info({pokemon}){
 
@@ -8,7 +9,7 @@ function Info({pokemon}){
     return (
         <div>
                 {
-                    !pokemon ? <div>Selecciona un pokemon</div> : (
+                    !pokemon ? <Intro/> : (
                         <div>
 
                             <div className='title'>
