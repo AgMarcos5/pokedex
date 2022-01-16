@@ -136,9 +136,6 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
-.stats div{
-    min-width: 300px;
-}
 .stats ul{
     padding-left: 10px;
 }
@@ -161,6 +158,12 @@
     font-weight: 400;
 }
 
+@media(min-width:941px){     
+    .stats div{
+        min-width: 300px;
+    }
+}
+
 @media(max-width:940px){
     .stats {
         flex-direction: row;
@@ -168,9 +171,11 @@
         width: 100%;
         flex-wrap: nowrap;
     }
+    .stats .col:first-child {
+        width: 30%;
+    }
     .stats div{
         max-width: 100%;
-        min-width: 0;
     }
     .stats ul {
         padding-left: 10px;
@@ -182,7 +187,17 @@
     }
     .col{
         margin: 10px;
-        width: 50%;
+        width: 70%;
         max-width: 500px !important;
+    }
+
+    .pikachu {
+        width: 100%;
+        text-align: center;
+        right: 0;
+        bottom: -80px;
+    }
+    .pikachu img{
+        width: 100px;
     }
 }

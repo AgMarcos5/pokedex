@@ -91,7 +91,7 @@ function App() {
         <div className='info-container'>
             <Info pokemon={pokemonSelected}/>
         </div>
-        <img src={pikachu} className='pikachu'/>
+        <div className='pikachu'><img src={pikachu}/></div>
       </div>    
       <div className='sidebar'>
           <SearchBox onSearch={onSearch}/>
